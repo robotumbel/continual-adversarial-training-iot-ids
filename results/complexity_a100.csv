@@ -1,0 +1,7 @@
+backbone,params_total,params_trainable,cat_extra_state_MB,epoch_s_with_pgd,epoch_s_no_pgd,pgd_multiplier,peak_train_mem_MB,latency_ms_per_sample,throughput_samples_sec,device
+dnn,60103,60103,0.46,0.42,0.05,8.77,20.7,0.0075,133309.7,NVIDIA A100-SXM4-40GB
+lstm,235591,235591,1.8,0.35,0.08,4.55,88.5,0.0125,80135.6,NVIDIA A100-SXM4-40GB
+transformer,350583,350583,2.67,1.67,0.24,6.86,114.5,0.0473,21126.0,NVIDIA A100-SXM4-40GB
+rdt,379098,379098,2.89,4.35,0.74,5.9,133.5,0.1224,8167.7,NVIDIA A100-SXM4-40GB
+aam_trans_no_gates,362071,362071,2.76,3.31,0.55,5.96,216.0,0.08,12496.4,NVIDIA A100-SXM4-40GB
+aam_trans,404275,404275,3.08,3.79,0.64,5.91,213.9,0.0945,10577.6,NVIDIA A100-SXM4-40GB

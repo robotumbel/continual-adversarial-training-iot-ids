@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+title: >-
+  Continual Adversarial Training for Attack-Incremental IoT Intrusion
+  Detection: code, audit tooling and per-run results
+message: >-
+  If you use this software or the evaluation-integrity audit, please
+  cite both the software and the paper it accompanies.
+type: software
+authors:
+  - given-names: Eko Arip
+    family-names: Winanto
+    email: winanto@graduate.utm.my
+    affiliation: >-
+      Faculty of Computing, Universiti Teknologi Malaysia; Department of
+      Computer Engineering, Universitas Dinamika Bangsa
+  - given-names: Mohd Yazid
+    family-names: Idris
+    email: yazid@utm.my
+    affiliation: >-
+      Faculty of Computing and MaGICX, Universiti Teknologi Malaysia
+  - given-names: Febby Tri
+    family-names: Ramadhanti
+    affiliation: Universitas Negeri Yogyakarta
+keywords:
+  - intrusion detection
+  - internet of things
+  - adversarial machine learning
+  - adversarial training
+  - continual learning
+  - class-incremental learning
+  - catastrophic forgetting
+  - data leakage
+  - benchmark integrity
+  - reproducibility
+abstract: >-
+  Code, evaluation-integrity tooling and the complete per-run results
+  (320 runs) for Continual Adversarial Training, a framework that places
+  a PGD-TRADES inner maximisation inside a continual-learning loop for
+  attack-incremental IoT intrusion detection. The audit tool measures
+  per-class record diversity and held-out overlap for tabular IDS
+  datasets; applying it disqualified one widely used benchmark and
+  corrected a leakage defect in our own pipeline.
+license: MIT
+repository-code: https://github.com/USERNAME/REPOSITORY
