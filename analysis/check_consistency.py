@@ -22,7 +22,6 @@ import sys
 
 import numpy as np
 import pandas as pd
-from scipy.stats import wilcoxon
 
 TEX = os.environ.get("PAPER_TEX", "paper3.tex")
 RUNS = os.path.join(os.path.dirname(os.path.dirname(
@@ -68,12 +67,25 @@ def load():
         subset=["dataset", "seed", "m", "backbone"], keep="last")
 
 
+def sign_flip_p(diff):
+    """Exact two-sided sign-flip permutation test on paired differences.
+
+    Flipping within each dataset block is the randomisation null the
+    protocol names; with the mean as statistic it equals flipping every
+    pair, so all 2^n sign patterns are enumerated directly.
+    """
+    import itertools
+    obs = abs(diff.mean())
+    signs = np.array(list(itertools.product([1, -1], repeat=len(diff))))
+    return float((np.abs((signs * diff).mean(axis=1)) >= obs - 1e-12).mean())
+
+
 def paired(d, a, bba, b, bbb, col):
     x = d[(d.m == a) & (d.backbone == bba)].set_index(["dataset", "seed"])[col]
     y = d[(d.m == b) & (d.backbone == bbb)].set_index(["dataset", "seed"])[col]
     i = x.index.intersection(y.index)
     diff = (x.sort_index()[i] - y.sort_index()[i]).values
-    return diff.mean(), wilcoxon(diff).pvalue, len(diff)
+    return diff.mean(), sign_flip_p(diff), len(diff)
 
 
 def main():
