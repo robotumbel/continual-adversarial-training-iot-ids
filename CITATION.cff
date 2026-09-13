@@ -41,4 +41,4 @@ abstract: >-
   datasets; applying it disqualified one widely used benchmark and
   corrected a leakage defect in our own pipeline.
 license: MIT
-repository-code: https://github.com/USERNAME/REPOSITORY
+repository-code: https://github.com/robotumbel/continual-adversarial-training-iot-ids
