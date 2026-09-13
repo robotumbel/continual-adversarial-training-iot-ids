@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pth
+runs*/
+balanced_data*/
+*.log
+figs/
+stats_r2.csv
+*.tmp
