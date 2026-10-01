@@ -25,6 +25,17 @@ authors:
     family-names: Mohd Sidik
     email: kufaisal@utm.my
     affiliation: Faculty of Computing, Universiti Teknologi Malaysia
+  - name: Sharipuddin
+    email: sharifbuhaira@gmail.com
+    affiliation: >-
+      Department of Informatics, Faculty of Computer Science, Universitas
+      Dinamika Bangsa
+  - given-names: Benni
+    family-names: Purnama
+    email: bennip75@gmail.com
+    affiliation: >-
+      Department of Information Systems, Faculty of Computer Science,
+      Universitas Dinamika Bangsa
 keywords:
   - intrusion detection
   - internet of things
